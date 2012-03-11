@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2'
+gem 'thin'
 
 gem 'mysql'
 gem 'httparty'
