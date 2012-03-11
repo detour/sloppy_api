@@ -45,6 +45,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.1.0)
+    mysql (2.8.1)
     mysql2 (0.3.11)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -89,5 +90,6 @@ PLATFORMS
 DEPENDENCIES
   dalli
   httparty
+  mysql
   mysql2
   rails (= 3.2)

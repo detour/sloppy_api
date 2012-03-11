@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2'
 
-gem 'mysql2'
+gem 'mysql'
 gem 'httparty'
 gem 'dalli'
 # gem 'memcache-client'
