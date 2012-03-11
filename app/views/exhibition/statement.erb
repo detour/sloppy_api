@@ -1,0 +1,32 @@
+
+
+<div id="container">
+  <div id="title">HIJACKERS</div>
+  <div id="desc">
+  	<div>How would an interface with its own consciousness, senses, and gestures reverse the passive role of user in Interaction Design? My remixing experiments introduce a playful aesthetic to familiar interfaces, which afford open reflections and interpretations. Remix Interactions are mash-ups of hacked web technology and humanistic expressions: a radical response to patterns of interface design which predicts human behavior. The work aims to provide room for people to speculate about human condition in the digital age.</div> 
+	
+  	<div>Pixel Monster outfits people with subversive technology for web images which transforms the passive end user into an active web space owner. As an equipment for consciousness, Anti-Like Magnet enables people to think and act critically about the prescribed interfaces of Facebook. The Search Operators opens up a narrative space inhabited by three sloppy Google operators - Jarek, Remo, and the yawning Surina - which allows people to speculate upon an emotional reality within technology. By anthropomorphizing interface elements using the latest web technology such as HTML5 and CSS3 transform, I have composed narrative spaces within interactions. These experiments are collaborative with Chawei Hsu in web development.</div> 
+	
+  	<div>A Critical Design scenario attempts to project a possible future situation by creating fictive artifacts. In contrast with Critical Design, Remix Interactions aims to bring critical thinking into our digital life by providing interactive experience. As Marshall McLuhan wrote, "Everybody Experiences far more than he understands. Yet it is experience, rather than understanding, that influences behavior."
+  	</div>
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  	
+  function fadeElements(color) {
+	    var count = $("#desc div").size();
+	    var step = 90 / count;
+	    $("#desc div").each(function(i) {
+	        var currentOpacity = 100 - (step * i);
+	        $(this).css("color", color)
+	            .css("opacity", currentOpacity = 100 ? "1" : "0." + parseInt(currentOpacity));
+	    });
+	}
+	
+	$(document).ready(function() {
+	    fadeElements("#fff");
+	});
+	
+</script>

@@ -1,0 +1,1 @@
+run "ln -nfs #{shared_path}/config/api_keys.yml #{release_path}/config/api_keys.yml"

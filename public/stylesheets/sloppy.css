@@ -1,0 +1,174 @@
+@font-face { 
+  font-family: Simple;
+  src: url('../font/Simple/SimplReg.ttf'); 
+}
+@font-face { 
+  font-family: Simple;
+  font-weight: bold;
+  src: url('../font/Simple/SimplBol.ttf'); 
+}
+@font-face { 
+  font-family: Simple;
+  font-style: oblique;
+  font-weight: bold;
+  src: url('../font/Simple/SimplBolObl.ttf'); 
+}
+@font-face { 
+  font-family: Simple;
+  font-style: oblique;
+  src: url('../font/Simple/SimplObl.ttf'); 
+}
+
+@font-face { 
+  font-family: TradeGothic;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('../font/TradeGot.ttf'); 
+}
+
+@font-face { 
+  font-family: TradeGothic;
+  font-weight: bold;
+  src: url('../font/TradeGotBol.ttf');
+}
+
+@font-face { 
+  font-family: TradeGothicCon;
+  font-weight: bold;
+  src: url('../font/TradeGotBolConTweObl.ttf'); 
+}
+
+html{ overflow: hidden; }
+
+body {
+	font-family: "TradeGothic", sans-serif;
+  text-align: left;
+  background-color: #000;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+#container {
+  margin: auto;
+  width: 416px;
+  height: 1024px;
+  position: relative;
+  /*border: 1px solid #fff;*/
+}
+
+/* 
+  Trends
+*/
+#trends {
+  font-family: Simple;
+  padding-top: 50px;
+}
+#trends a {
+  color: #fff;
+}
+#trends #detail {
+  text-align: center;
+  padding: 28px;
+}
+#trends .detail_title {
+  font-weight: bold;
+  font-style: oblique;
+}
+#trends #chart {
+  text-align: left;
+  font-size: 18px;
+  line-height: 21px;
+}
+#trends #chart #title{
+  font-weight: bold;
+}
+
+
+
+
+/* 
+  Review
+*/
+.article {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.article .profile {
+  max-width: 48px;
+  float:left;
+}
+.article .item_info {
+  float:left;
+  margin-left: 10px;
+  width: 350px;
+}
+.article .source {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.article .title {
+/*  font-family: Simple;
+  font-style: oblique;*/
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.article .content {
+  
+}
+.article .content div{
+  margin-top: 18px;
+}
+
+
+
+.review_item {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+  .review_item .profile {
+    max-width: 48px;
+    float:left;
+  }
+  .review_item .item_info {
+    float:left; 
+    margin-left: 10px;
+    width: 350px;
+  }
+  .review_item .user_name{
+    font-weight: bold;
+  }
+  .review_item .text{
+  }
+  /*.review_item .created_at{
+      color: #999;
+    }*/
+
+.review_item:nth-child(-n+5), .review_item:nth-child(n+7) {
+  opacity: 0.7;
+}
+.review_item:nth-child(-n+4), .review_item:nth-child(n+8) {
+  opacity: 0.5;
+}
+.review_item:nth-child(-n+2), .review_item:nth-child(n+11) {
+  opacity: 0.3;
+}
+
+
+.hidden {
+  display: none;
+}
+
+#nav_arrow {
+  width: 20px;
+  display: block;
+  position: absolute;
+  top: 270px;
+  right: -23px;
+}
+  #nav_arrow img {
+    width: 20px;
+  }
+  
+#trends #nav_arrow {
+  top: 295px;
+}

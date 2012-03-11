@@ -1,0 +1,43 @@
+<% content_for :foot do %>
+<iframe id="main_iframe" src="http://api.detourlab.com/sloppy/demo" width="100%" height="99%" style="border: none; margin: 0;">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+<div id="statement" style="position: absolute; top: -1000px;">
+  <a id="statement_one" class="control_link" rel="http://api.detourlab.com/statement">statement_one</a>
+</div>
+
+<div id="search_operators" style="position: absolute; top: -1000px;">
+  <a id="search_one" class="control_link" rel="http://api.detourlab.com/sloppy/demo">search_one</a>
+  <a id="search_two" class="control_link" rel="http://api.detourlab.com/sloppy/trends">search_two</a>
+  <a id="search_three" class="control_link" rel="http://api.detourlab.com/sloppy/review">search_three</a>
+</div>
+
+<div id="magnet" style="position: absolute; top: -1000px;">
+  <a id="magnet_one" class="control_link" rel="http://api.detourlab.com/map?latest=true">magnet_one</a>
+  <a id="magnet_two" class="control_link" rel="http://api.detourlab.com/map">magnet_two</a>
+</div>
+
+<div id="monster" style="position: absolute; top: -1000px;">
+  <a id="monster_one" class="control_link" rel="http://monster.detourlab.com/exhibition">monster_one</a>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $('.control_link').click(function(e){
+    var that = this;
+    e.preventDefault();
+    
+    $('body').animate({
+        opacity: 0.0
+      }, 600, function(){
+        $('iframe').attr('src', $(that).attr('rel'));
+    });
+  });
+  
+  $("#main_iframe").load(function (){
+    $('body').animate({
+      opacity: 1.0
+    });
+  });
+</script>
+<% end %>

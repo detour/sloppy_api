@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  query: MyString
+  messed_query: MyString
+  query_ip: MyString
+
+two:
+  query: MyString
+  messed_query: MyString
+  query_ip: MyString

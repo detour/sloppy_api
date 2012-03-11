@@ -1,0 +1,29 @@
+<% title "Hot_searches", false %>
+
+<div class="index_container">
+  <div class="description">
+  </div>
+
+  <div class='index_header'>
+    <span class='title'>List of hot_searches</span>
+    (<%= link_to 'add a new hot search', new_hot_search_path %>)
+  </div>
+
+  <table class="index">
+    <tr>
+      <th>Content</th>
+      <th></th>
+    </tr>
+
+  <% @hot_searches.each do |hot_search| %>
+    <tr>
+      <td><%= hot_search.content %></td>
+      <td class="actions">
+        <%= link_to 'View', hot_search %> |
+        <%= link_to 'Edit', edit_hot_search_path(hot_search) %> |
+        <%= link_to 'Delete', hot_search, :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>

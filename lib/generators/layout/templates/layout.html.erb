@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html>  
+  <head>  
+    <title><%%= h(yield(:title) || "Portfolio") %></title>  
+    <%- if options.stylesheet? -%>  
+    <%%= stylesheet_link_tag "<%= file_name %>" %>  
+    <%- end -%>  
+    <%%= javascript_include_tag :defaults %>  
+    <%%= csrf_meta_tag %>  
+    <%%= yield(:head) %>  
+  </head>  
+  <body>  
+    <div id="container"> 
+      <div id="flash_msgs"> 
+        <%% flash.each do |name, msg| %>  
+          <%%= content_tag :div, msg, :id => "flash_#{name}" %>  
+        <%% end %>
+      </div>
+      
+      <div id="header_wrap">
+        <div id="header">
+          <div id="logo">Admin Panel</div>
+          <div id="login_box">
+            <div id="actions">
+              <div class="action_1">
+                <%%= link_to 'Help', '' %> or
+                <%%= link_to 'Logout', '' %>
+              </div>
+            </div>
+            <div id="greeting">
+              Hello <span class="name">Admin</span>
+            </div>
+          </div> <!-- END login_box -->
+        </div> <!-- END header -->
+      </div>
+
+      <div id="navigation_wrap" class="clear">
+        <div id="navigation">
+          <%%= render_navigation %>
+        </div>
+      </div>
+      
+      <div id="main_wrap">
+        <div id="main">
+          <%%- if show_title? -%>
+          <div id="headtitle"><%%=h yield(:title) %></div>
+          <%%- end -%>
+          
+          <%%= yield %> 
+        </div>
+      </div>
+    </div>
+    <%%= yield(:foot) %>
+  </body>  
+</html>

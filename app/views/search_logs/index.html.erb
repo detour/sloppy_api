@@ -1,0 +1,30 @@
+<% title "Search_logs", false %>
+
+<div>counts: <%= SearchLog.count %></div>
+
+<div class="index_container">
+  <div class="description">
+  </div>
+
+  <div class='index_header'>
+    <span class='title'>List of search_logs</span>
+  </div>
+
+  <table class="index">
+    <tr>
+      <th>Query</th>
+      <th>Messed query</th>
+      <th>Lang</th>
+      <th>Created at</th>
+    </tr>
+
+  <% @search_logs.each do |search_log| %>
+    <tr>
+      <td><%= search_log.query %></td>
+      <td><%= search_log.messed_query %></td>
+      <td><%= search_log.lang %></td>
+      <td><%= search_log.created_at.to_s(:short) %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

@@ -1,0 +1,11 @@
+<div class="nav_links">
+  <%= link_to 'Edit', edit_hot_search_path(@hot_search) %> |
+  <%= link_to 'Back', hot_searches_path %>
+</div>
+
+<div class="show_container">
+  <div class="row">
+    <div class="label">Content</div>
+    <div class="data"><%= @hot_search.content %></div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div id="container">
+	<div id="trends">
+		<div id="detail">
+			<div id="keyword" style="font-size:21px;"></div>
+			<div id="hotness_graph" style='margin:8px 0 4px 0'></div>
+			<div class="detail_title" style="margin-top:23px;">Hotness: <span id="hotness_level" style="color:#ff0000;"></span></div>
+			<div class="detail_title" style="margin-top:20px;">Related Searches</div>
+			<div style="margin-top:5px;" id="related_searches"></div>
+			<div class="detail_title" style="margin-top:18px;">Total Searches</div>
+			<div style="margin-top:5px;" id="total_search"></div>
+		
+			<div style="width:400px;height:300px;margin-top:20px;float:left;" id="hotnessGraph" />	
+		</div>
+
+		<div id="chart">
+			<div id="title">Hot Searches</div>
+			<div id="search_list">
+				<ol>
+				</ol>
+			</div>
+		</div>
+		<!--<div id="nav_arrow"><img src="/images/arrow_small.png" /></div>-->
+	</div>
+</div>
+
+<% content_for :foot do %>
+<script type="text/javascript" language="javascript" src="<%= CDN_URL %>/jquery.url.js"></script>
+<script type="text/javascript" language="javascript" src="<%= CDN_URL %>/processing-1.0.0.js"></script>
+<script type="text/javascript" language="javascript" src="/javascripts/p_base.js"></script>		
+<script type="text/javascript" language="javascript" src="/javascripts/trends.js"></script>
+<% end %>

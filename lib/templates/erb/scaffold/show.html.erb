@@ -1,0 +1,13 @@
+<div class="nav_links">
+  <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |
+  <%%= link_to 'Back', <%= index_helper %>_path %>
+</div>
+
+<div class="show_container">
+  <%- for attribute in attributes -%>
+  <div class="row">
+    <div class="label"><%= attribute.human_name %></div>
+    <div class="data"><%%= @<%= singular_table_name %>.<%= attribute.name %> %></div>
+  </div>
+  <%- end -%>
+</div>

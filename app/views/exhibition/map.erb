@@ -1,0 +1,24 @@
+<% content_for :head do %>
+<% if params[:mode] == "projection" %>
+<style type="text/css" media="screen">
+  #map {
+    height: 1024px;
+    width: 416px;
+  }
+  
+  #panel {
+    top: 600px;
+  }
+</style>
+<% end %>
+<% end %>
+
+<div id="map"></div>
+
+<% content_for :foot do %>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://github.com/detour/js/raw/master/jquery.url.js"></script>
+<script type="text/javascript" src="http://github.com/simplegeo/polymaps/raw/v2.2.0/polymaps.js"></script>
+<script type="text/javascript" language="javascript" src="/javascripts/map.js"></script>
+<script type="text/javascript" language="javascript" src="<%= CDN_URL %>/fly.js"></script>
+<% end %>

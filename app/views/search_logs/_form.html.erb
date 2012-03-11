@@ -1,0 +1,29 @@
+<%= form_for(@search_log) do |f| %>
+  <% if @search_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@search_log.errors.count, "error") %> prohibited this search_log from being saved:</h2>
+
+      <ul>
+      <% @search_log.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="label"><%= f.label :query %></div>
+    <div class="input"><%= f.text_field :query %></div>
+  </div>
+  <div class="field">
+    <div class="label"><%= f.label :messed_query %></div>
+    <div class="input"><%= f.text_field :messed_query %></div>
+  </div>
+  <div class="field">
+    <div class="label"><%= f.label :query_ip %></div>
+    <div class="input"><%= f.text_field :query_ip %></div>
+  </div>
+  <div class="actions">
+    <div class="submit"><%= f.submit %></div>
+  </div>
+<% end %>

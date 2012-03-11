@@ -1,0 +1,21 @@
+<%= form_for(@hot_search) do |f| %>
+  <% if @hot_search.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hot_search.errors.count, "error") %> prohibited this hot_search from being saved:</h2>
+
+      <ul>
+      <% @hot_search.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="label"><%= f.label :content %></div>
+    <div class="input"><%= f.text_area :content %></div>
+  </div>
+  <div class="actions">
+    <div class="submit"><%= f.submit %></div>
+  </div>
+<% end %>

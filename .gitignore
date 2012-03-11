@@ -1,0 +1,8 @@
+.DS_Store
+.rvmrc
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+config/api_keys.yml
+config/database.yml

@@ -1,0 +1,19 @@
+<div class="nav_links">
+  <%= link_to 'Edit', edit_search_log_path(@search_log) %> |
+  <%= link_to 'Back', search_logs_path %>
+</div>
+
+<div class="show_container">
+  <div class="row">
+    <div class="label">Query</div>
+    <div class="data"><%= @search_log.query %></div>
+  </div>
+  <div class="row">
+    <div class="label">Messed query</div>
+    <div class="data"><%= @search_log.messed_query %></div>
+  </div>
+  <div class="row">
+    <div class="label">Query ip</div>
+    <div class="data"><%= @search_log.query_ip %></div>
+  </div>
+</div>

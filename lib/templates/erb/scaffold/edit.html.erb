@@ -1,0 +1,10 @@
+<%% title "Edit <%= singular_table_name.capitalize %>" %>
+
+<div class="nav_links">
+  <%%= link_to 'View details', @<%= singular_table_name %> %> |
+  <%%= link_to 'Back to List', <%= index_helper %>_path %>
+</div>
+
+<div class="edit_container">
+  <%%= render 'form' %>
+</div>
