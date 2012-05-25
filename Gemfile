@@ -8,6 +8,9 @@ gem 'thin'
 gem 'mysql'
 gem 'httparty'
 gem 'dalli'
+
+gem 'net-ssh', '2.4.0'
+
 # gem 'memcache-client'
 
 # Use unicorn as the web server
