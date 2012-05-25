@@ -28,7 +28,7 @@ namespace :deploy do
   desc "Symlink config files and db"
   task :config_symlink do
     run "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "ln -s #{shared_path}/config/oauth.yml #{release_path}/config/api_keys.yml"
+    run "ln -s #{shared_path}/config/api_keys.yml #{release_path}/config/api_keys.yml"
   end
 end
 
